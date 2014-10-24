@@ -87,7 +87,7 @@ func (n *Negroni) UseHandler(handler http.Handler) {
 // Run is a convenience function that runs the negroni stack as an HTTP
 // server. The addr string takes the same format as http.ListenAndServe.
 func (n *Negroni) Run(addr string) {
-	l := log.New(os.Stdout, "[negroni] ", 0)
+	l := log.New(os.Stdout, "[asink] ", 0)
 	l.Printf("listening on %s", addr)
 	l.Fatal(http.ListenAndServe(addr, n))
 }
